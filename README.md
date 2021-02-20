@@ -48,7 +48,7 @@ The NEW_VARIABLE holding the votes for each (or candidate) is then used in deter
 1.	If NEW_VARIABLE (now holding vote count for COUNTY A) > LARGEST_COUNT (variable set to 0). In this case, the first county (COUNTY A) to test this conditional will always be greater than 0 so the statement will always be “true.”
 
 3.	LARGEST_COUNT = NEW_VARIABLE.
-Here we are changing the value of LARGEST_COUNT to be equal to the number of the votes for the first county (COUNTY A). It is important to remember that this if-statement is a part of a loop that is iterating through a dictionary of only three values. 
+Here the value of LARGEST_COUNT is being updated to be equal to the number of the votes for the first county (COUNTY A). It is important to remember that this if-statement is a part of a loop that is iterating through a dictionary of only three values. 
 
 For example, if we had counted only the first 100 votes instead of all the votes, assume the total was:  
   
@@ -65,3 +65,4 @@ Finally, because the NEW_VARIABLE is indexed to its key in the dictionary, once 
 Ultimately the county with the most votes recorded is Denver with 306,055 votes.
 
 ### Summary
+Now that the code has shown to tabulate the correct results, it can be used as a template for other elections, both big and small, across the state. The only necessary change to the code would be the reference to a different input worksheet but otherwise the code, as is, is capable of producing similar results. However, the code could also be made more efficient by combining the county and candidate dictionaries onto one list which would reduce redundant code. Also, this would make it possible to easily calculate candidate votes per county which would be a helpful metric when analyzing the election results.
